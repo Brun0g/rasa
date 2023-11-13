@@ -61,30 +61,31 @@ function Basic() {
   console.log(chat);
 
   const stylecard = {
-    maxWidth: "35rem",
-    border: "1px solid black",
+    maxWidth: "50rem",
     paddingLeft: "0px",
     paddingRight: "0px",
-    borderRadius: "30px",
+    borderRadius: "10px",
+    marginTop: "10%",
     boxShadow: "0 16px 20px 0 rgba(0,0,0,0.4)",
   };
+
   const styleHeader = {
-    height: "4.5rem",
+    height: "5rem",
     borderBottom: "1px solid black",
-    borderRadius: "30px 30px 0px 0px",
-    backgroundColor: "#8012c4",
+    borderRadius: "10px 10px 0px 0px",
+    background: "linear-gradient(114deg, rgba(0,0,0,1) 0%, rgba(85,85,85,1) 50%, rgba(20,20,21,1) 100%)",
   };
+
   const styleFooter = {
     //maxWidth : '32rem',
-    borderTop: "1px solid black",
-    borderRadius: "0px 0px 30px 30px",
-    backgroundColor: "#8012c4",
+    height: "7rem",
+    borderRadius: "0px 0px 10px 10px",
+    background: "linear-gradient(114deg, rgba(0,0,0,1) 0%, rgba(85,85,85,1) 50%, rgba(20,20,21,1) 100%)",
   };
+
   const styleBody = {
     paddingTop: "10px",
     height: "28rem",
-    overflowY: "a",
-    overflowX: "hidden",
   };
 
   return (
@@ -95,7 +96,7 @@ function Basic() {
         <div className="row justify-content-center">
           <div className="card" style={stylecard}>
             <div className="cardHeader text-white" style={styleHeader}>
-              <h1 style={{ marginBottom: "0px" }}>AI Assistant</h1>
+              <h1 style={{ marginTop: "1%", fontSize: "2rem" }}>AI Assistant</h1>
               {botTyping ? <h6>Bot Typing....</h6> : null}
             </div>
             <div className="cardBody" id="messageArea" style={styleBody}>
@@ -121,7 +122,7 @@ function Basic() {
               <div className="row">
                 <form style={{ display: "flex" }} onSubmit={handleSubmit}>
                   <div className="col-10" style={{ paddingRight: "0px" }}>
-                    <input onChange={(e) => setInputMessage(e.target.value)} value={inputMessage} type="text" className="msginp"></input>
+                    <input placeholder="Digite aqui..." onChange={(e) => setInputMessage(e.target.value)} value={inputMessage} type="text" className="msginp"></input>
                   </div>
                   <div className="col-2 cola">
                     <button type="submit" className="circleBtn">
